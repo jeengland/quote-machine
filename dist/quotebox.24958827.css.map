@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;IACI,4BAA4B;IAC5B,uDAA0C;IAC1C,UAAU;EACZ","file":"quotebox.24958827.css","sourceRoot":"..","sourcesContent":[".main {\r\n    /* Reference an image file */\r\n    background: url('./images/background.png');\r\n    color: red;\r\n  }"]}

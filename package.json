@@ -1,0 +1,33 @@
+{
+  "name": "quote-machine",
+  "version": "1.0.0",
+  "description": "Quote generator page project for FreeCodeCamp",
+  "main": "quotebox.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeengland/quote-machine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeengland/quote-machine/issues"
+  },
+  "homepage": "https://github.com/jeengland/quote-machine#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.12.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "sass": "^1.17.2"
+  }
+}
