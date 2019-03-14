@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,IAAI,CAAC;EACD,UAAU,EAAE,SAAS;EACrB,KAAK,EAAE,KAAK,GACf","file":"quote-machine.e31bb0bc.css","sourceRoot":"..","sourcesContent":["body {\r\n    background: steelblue;\r\n    color: white;\r\n}"]}

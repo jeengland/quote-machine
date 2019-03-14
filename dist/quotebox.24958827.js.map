@@ -1,1 +1,0 @@
-{"version":3,"sources":["quotebox.js"],"names":["document","write"],"mappings":"AAAA;AACAA,QAAQ,CAACC,KAAT,CAAe,mBAAf","file":"quotebox.24958827.js","sourceRoot":"..","sourcesContent":["// import another component\r\ndocument.write('parcel says hello')"]}

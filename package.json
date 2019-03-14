@@ -4,8 +4,8 @@
   "description": "Quote generator page project for FreeCodeCamp",
   "main": "quotebox.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.js"
+    "start": "parcel index.html --out-dir docs",
+    "build": "parcel build index.html --out-dir docs --public-url ./"
   },
   "repository": {
     "type": "git",
