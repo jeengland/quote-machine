@@ -24,9 +24,7 @@
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.12.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-redux": "^6.0.1",
-    "redux": "^4.0.1"
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

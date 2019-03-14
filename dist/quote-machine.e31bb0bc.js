@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"styles.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/object-assign/index.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/object-assign/index.js":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -25787,14 +25787,134 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Quote = function Quote() {
-  return _react.default.createElement("h1", null, "Quote Machine");
-};
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Quote =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Quote, _React$Component);
+
+  function Quote(props) {
+    var _this;
+
+    _classCallCheck(this, Quote);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Quote).call(this, props));
+    _this.state = {
+      quotes: [{
+        "quote": "I hear the jury's still out on science",
+        "char": "Gob"
+      }, {
+        "quote": "Why should you go to jail for a crime someone else noticed? You don’t need double talk, you need Bob Loblaw.",
+        "char": "Bob Loblaw"
+      }, {
+        "quote": "Steve Holt!",
+        "char": "Steve Holt"
+      }, {
+        "quote": "Do you think I could have a hit of the juice box?",
+        "char": "Buster"
+      }, {
+        "quote": "I don't care for Gob",
+        "char": "Lucille"
+      }, {
+        "quote": "Annyong!",
+        "char": "Annyong"
+      }, {
+        "quote": "Marry me!",
+        "char": "Maeby"
+      }, {
+        "quote": "I mean, it's one banana. What could it cost, ten dollars?",
+        "char": "Lucille"
+      }, {
+        "quote": "There's always money in the banana stand",
+        "char": "George Sr."
+      }, {
+        "quote": "I've made a huge mistake",
+        "char": "Gob"
+      }, {
+        "quote": "I'm afraid I just blue myself",
+        "char": "Tobias"
+      }, {
+        "quote": "Who'd like a banger in the mouth?",
+        "char": "Mrs. Featherbottom"
+      }, {
+        "quote": "And that's why you always leave a note",
+        "char": "J. Walter Weatherman"
+      }, {
+        "quote": "She calls it a mayonegg",
+        "char": "George Michael"
+      }, {
+        "quote": "Do you guys know where I could get one of those gold necklaces with the 'T' on it?",
+        "char": "Maeby"
+      }, {
+        "quote": "You're gonna get some hop-ons",
+        "char": "Michael"
+      }, {
+        "quote": "Did 'nothing' cancel?",
+        "char": "Lucille"
+      }, {
+        "quote": "There are dozens of us! Dozens!",
+        "char": "Tobias"
+      }],
+      index: Math.floor(Math.random() * Math.floor(17))
+    };
+    _this.Randomize = _this.randomize.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Quote, [{
+    key: "randomize",
+    value: function randomize() {
+      this.setState({
+        index: Math.floor(Math.random() * Math.floor(17))
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var quote = this.state.quotes[this.state.index].quote;
+      var att = this.state.quotes[this.state.index].char;
+      var tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' ~' + att);
+      return _react.default.createElement("div", {
+        id: "quote-box"
+      }, _react.default.createElement("div", {
+        id: "text"
+      }, "\"", quote, "\""), _react.default.createElement("div", {
+        id: "author"
+      }, "~  ", att), _react.default.createElement("button", {
+        onClick: this.Randomize,
+        id: "new-quote"
+      }, "New Quote"), _react.default.createElement("a", {
+        id: "tweet-quote",
+        href: tweet,
+        target: "_blank"
+      }, _react.default.createElement("button", null, "Tweet Quote")));
+    }
+  }]);
+
+  return Quote;
+}(_react.default.Component);
 
 var rootDiv = document.getElementById('root');
 
 _reactDom.default.render(_react.default.createElement(Quote, null), rootDiv);
-},{"./styles.scss":"styles.scss","react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles.scss":"styles.scss","react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25822,7 +25942,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59588" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64040" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -25997,5 +26117,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/quote-machine.e31bb0bc.js.map
