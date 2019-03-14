@@ -2,10 +2,12 @@ import './styles.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// main react component
 class Quote extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // quote table
             quotes: [
             {"quote": "I hear the jury's still out on science", "char":"Gob"}, 
             {"quote": "Why should you go to jail for a crime someone else noticed? You don’t need double talk, you need Bob Loblaw.", "char":"Bob Loblaw"},
@@ -26,18 +28,29 @@ class Quote extends React.Component {
             {"quote": "Did 'nothing' cancel?", "char": "Lucille"},
             {"quote": "There are dozens of us! Dozens!", "char": "Tobias"}
             ],
+            // initialize the index to a random quote
             index: Math.floor(Math.random() * Math.floor(17))
         }
         this.Randomize = this.randomize.bind(this);
     }
+    // function for randomizing the quote index, ensuring that the same quote doesn't appear twice
     randomize() {
-        this.setState({ index: Math.floor(Math.random() * Math.floor(17)) })
+        let newIndex = Math.floor(Math.random() * Math.floor(17));
+        if (newIndex != this.state.index) {
+            this.setState({ index: newIndex })
+        }
+        else {
+            this.setState({ index: newIndex + 1})
+        }
     }
     render() {
+        // set props to the quote at the current index
         let quote = this.state.quotes[this.state.index].quote;
         let att = this.state.quotes[this.state.index].char;
+        // set up the tweet url to include proper formatting
         let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' ~' + att) 
         return (
+            // set up the main quote box 
             <div id="quote-box">
                 <div id="text">
                     "{quote}"
