@@ -48,7 +48,7 @@ class Quote extends React.Component {
         let quote = this.state.quotes[this.state.index].quote;
         let att = this.state.quotes[this.state.index].char;
         // set up the tweet url to include proper formatting
-        let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' ~' + att) 
+        let tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' -' + att) 
         return (
             // set up the main quote box 
             <div id="quote-box">
@@ -56,16 +56,16 @@ class Quote extends React.Component {
                     "{quote}"
                 </div>
                 <div id="author">
-                    ~  {att}
+                    -  {att}
                 </div>
-                <button onClick={this.Randomize} id="new-quote">
-                    New Quote
-                </button> 
-                <a id="tweet-quote" href = {tweet} target="_blank">
-                    <button>
-                        Tweet Quote
-                    </button>
-                </a>
+                <div id="buttons">
+                    <a onClick={this.Randomize} id="new-quote">
+                        <i class="fas fa-sync-alt"></i>
+                    </a> 
+                    <a id="tweet-quote" href = {tweet} target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
         )
     }

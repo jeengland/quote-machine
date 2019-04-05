@@ -25805,6 +25805,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+// main react component
 var Quote =
 /*#__PURE__*/
 function (_React$Component) {
@@ -25817,6 +25818,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Quote).call(this, props));
     _this.state = {
+      // quote table
       quotes: [{
         "quote": "I hear the jury's still out on science",
         "char": "Gob"
@@ -25872,39 +25874,59 @@ function (_React$Component) {
         "quote": "There are dozens of us! Dozens!",
         "char": "Tobias"
       }],
+      // initialize the index to a random quote
       index: Math.floor(Math.random() * Math.floor(17))
     };
     _this.Randomize = _this.randomize.bind(_assertThisInitialized(_this));
     return _this;
-  }
+  } // function for randomizing the quote index, ensuring that the same quote doesn't appear twice
+
 
   _createClass(Quote, [{
     key: "randomize",
     value: function randomize() {
-      this.setState({
-        index: Math.floor(Math.random() * Math.floor(17))
-      });
+      var newIndex = Math.floor(Math.random() * Math.floor(17));
+
+      if (newIndex != this.state.index) {
+        this.setState({
+          index: newIndex
+        });
+      } else {
+        this.setState({
+          index: newIndex + 1
+        });
+      }
     }
   }, {
     key: "render",
     value: function render() {
+      // set props to the quote at the current index
       var quote = this.state.quotes[this.state.index].quote;
-      var att = this.state.quotes[this.state.index].char;
-      var tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' ~' + att);
-      return _react.default.createElement("div", {
-        id: "quote-box"
-      }, _react.default.createElement("div", {
-        id: "text"
-      }, "\"", quote, "\""), _react.default.createElement("div", {
-        id: "author"
-      }, "~  ", att), _react.default.createElement("button", {
-        onClick: this.Randomize,
-        id: "new-quote"
-      }, "New Quote"), _react.default.createElement("a", {
-        id: "tweet-quote",
-        href: tweet,
-        target: "_blank"
-      }, _react.default.createElement("button", null, "Tweet Quote")));
+      var att = this.state.quotes[this.state.index].char; // set up the tweet url to include proper formatting
+
+      var tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent('"' + quote + '"' + ' -' + att);
+      return (// set up the main quote box 
+        _react.default.createElement("div", {
+          id: "quote-box"
+        }, _react.default.createElement("div", {
+          id: "text"
+        }, "\"", quote, "\""), _react.default.createElement("div", {
+          id: "author"
+        }, "-  ", att), _react.default.createElement("div", {
+          id: "buttons"
+        }, _react.default.createElement("a", {
+          onClick: this.Randomize,
+          id: "new-quote"
+        }, _react.default.createElement("i", {
+          "class": "fas fa-sync-alt"
+        })), _react.default.createElement("a", {
+          id: "tweet-quote",
+          href: tweet,
+          target: "_blank"
+        }, _react.default.createElement("i", {
+          "class": "fab fa-twitter"
+        }))))
+      );
     }
   }]);
 
@@ -25942,7 +25964,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58713" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

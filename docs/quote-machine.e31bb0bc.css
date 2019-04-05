@@ -1,6 +1,37 @@
 body {
-  background: steelblue;
-  color: white; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F16E1E;
+  font-family: 'Noto Sans TC', sans-serif; }
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 15px;
+  background: black;
+  color: white;
+  width: 500px;
+  min-height: 100px;
+  margin-top: 30vh; }
+
+#text {
+  font-size: 30px; }
+
+#author {
+  font-size: 20px;
+  text-align: right; }
+
+#tweet-quote {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  font-size: 25px; }
+
+#new-quote {
+  padding: 10px;
+  font-size: 25px; }
 
 
 /*# sourceMappingURL=/quote-machine.e31bb0bc.css.map */

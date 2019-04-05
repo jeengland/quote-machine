@@ -1,0 +1,2 @@
+body{display:flex;align-items:center;justify-content:center;background:#f16e1e;font-family:Noto Sans TC,sans-serif}#quote-box{display:flex;flex-direction:column;border-radius:15px;padding:15px;background:#000;color:#fff;width:500px;min-height:100px;margin-top:30vh}#text{font-size:30px}#author{font-size:20px;text-align:right}#tweet-quote{text-decoration:none;color:inherit}#new-quote,#tweet-quote{padding:10px;font-size:25px}
+/*# sourceMappingURL=quote-machine.f75c9f45.css.map */
